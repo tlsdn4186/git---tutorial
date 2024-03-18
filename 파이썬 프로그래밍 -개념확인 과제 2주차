@@ -1,0 +1,14 @@
+def get_radius(prompt) :
+  r= int(input(prompt))
+
+  return r
+
+
+def get_circle_area(a) :
+  k =a*a* 3.14
+  return k
+
+
+a= get_radius('넓이를 구하고자하는 원의 반지름은?')
+k = get_circle_area(a)
+print('반지름 ',a,'인 원의 넓이는 ','3.14*',a,'*',a, '=',k ,sep='')
