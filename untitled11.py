@@ -8,106 +8,6 @@ Original file is located at
 """
 
 def read_single_digit(num):
-  if num<10:
-    if num ==0:
-      return  '영'
-    elif num == 1:
-      return '일'
-    elif num == 2:
-      return '이'
-    elif num == 3:
-      return '삼'
-    elif num == 4:
-      return '사'
-    elif num == 5:
-      return '오'
-    elif num == 6:
-      return '육'
-    elif num == 7:
-      return '칠'
-    elif num == 8:
-      return '팔'
-    elif num == 9:
-      return '구'
-  else:
-    return
-
-
-
-
-def read_number(num):
-  if num < 10:
-    return read_single_digit(num)
-  elif num <100:
-    t = num //10
-    o = num%10
-    t1 = read_single_digit(t)
-    o1 = read_single_digit(o)
-    return {t},{o}
-  else:
-    h = num //100
-    t = (num //10)%10
-    o = num%10
-    h1 = read_single_digit(h)
-    t1 = read_single_digit(t)
-    o1 = read_single_digit(o)
-    return f'{h},{t},{o}'
-
-n = int(input(' 세자리 정수 입력'))
-read_number(n)
-
-def read_single_digit(num):
-
-    if num == 0:
-        return "영"
-    elif num == 1:
-        return "일"
-    elif num == 2:
-        return "이"
-    elif num == 3:
-        return "삼"
-    elif num == 4:
-        return "사"
-    elif num == 5:
-        return "오"
-    elif num == 6:
-        return "육"
-    elif num == 7:
-        return "칠"
-    elif num == 8:
-        return "팔"
-    elif num == 9:
-        return "구"
-
-def read_number(num):
-
-    if num < 10:
-        return read_single_digit(num)
-    elif num < 100:
-        t = read_single_digit(num // 10)
-        o = read_single_digit(num % 10)
-        if o == "영":
-            return f"{t}"
-        else:
-            return f"{t}{o}"
-    else:
-        h = read_single_digit(num // 100)
-        t = read_single_digit((num // 10) % 10)
-        o = read_single_digit(num % 10)
-        if t == "영" and o == "영":
-            return f"{h}"
-        elif t == "영":
-            return f"{h}{o}"
-        elif o == "영":
-            return f"{h}{t}"
-        else:
-            return f"{h}{t}{o}"
-
-
-user_input = int(input("세 자리수 이하의 정수를 입력하세요: "))
-read_number(user_input)
-
-def read_single_digit(num):
 
     if num == 0:
         return "영"
@@ -147,5 +47,5 @@ def read_number(num):
 
 
 
-user_input = int(input("세 자리수 이하의 정수를 입력하세요: "))
+user_input = int(input("세 자리수 이하의 정수 입력: "))
 read_number(user_input)
